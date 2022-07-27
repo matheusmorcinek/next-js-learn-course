@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Home() {
   return (
@@ -8,6 +9,15 @@ export default function Home() {
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      {/* //https://nextjs.org/learn/basics/assets-metadata-css/assets */}
+      <img src="/images/profile.jpg" alt="Your Name" />
+      <Image
+        src="/images/profile.jpg"
+        height={144}
+        width={144}
+        alt="Matheus Morcinek"
+      />
 
       <main>
         <h1 className="title">

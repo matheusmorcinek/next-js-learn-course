@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { useState } from "react";
+import Head from 'next/head';
+import Script from 'next/script';
 
 export default function FirstPost() {
 
@@ -7,6 +9,18 @@ export default function FirstPost() {
 
     return (
         <>
+            <Head>
+                <title>First Post - {message}</title>
+                {/* <script src="https://connect.facebook.net/en_US/sdk.js" /> */}
+            </Head>
+            {/* example https://nextjs.org/learn/basics/assets-metadata-css/third-party-javascript */}
+            {/* <Script
+                src="https://connect.facebook.net/en_US/sdk.js"
+                strategy="lazyOnload"
+                onLoad={() =>
+                    console.log(`script loaded correctly, window.FB has been populated`)
+                }
+            /> */}
             <h1>First Post</h1>
             <h2>
                 <Link href="/">
