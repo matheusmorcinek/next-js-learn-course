@@ -1,14 +1,14 @@
+import Head from 'next/head';
 import Link from "next/link";
 import { useState } from "react";
-import Head from 'next/head';
-import Script from 'next/script';
+import Layout from '../../components/layout';
 
 export default function FirstPost() {
 
     const [message, setMessage] = useState('First Post')
 
     return (
-        <>
+        <Layout>
             <Head>
                 <title>First Post - {message}</title>
                 {/* <script src="https://connect.facebook.net/en_US/sdk.js" /> */}
@@ -27,6 +27,6 @@ export default function FirstPost() {
                     <a>Back to home</a>
                 </Link>
             </h2>
-        </>
+        </Layout>
     );
 }
